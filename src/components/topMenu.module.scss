@@ -1,0 +1,11 @@
+.topMenu {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    /* make the top row exactly the height allocated by the grid */
+    height: 56px;
+    box-sizing: border-box;
+    border: 1px solid black;
+
+    /* ensure its contents don't push the layout down */
+    overflow: hidden;
+}

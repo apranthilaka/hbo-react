@@ -1,0 +1,79 @@
+.dashboard {
+    /* Place in the layout grid */
+    grid-column: 2/3;
+    grid-row: 2/3;
+    /* Fill available vertical space from the layout */
+    height: 100%;
+    min-height: 0;
+    /* allow children to scroll inside flex/grid */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    padding-bottom: 0;
+
+}
+
+.dashboardTitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.dashboardCardContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: auto;
+    gap: 16px;
+    padding-bottom: 16px;
+    border: 1px solid none;
+    /* Let this container take remaining space and scroll internally */
+    flex: 1 1 auto;
+    min-height: 0;
+    /* allow internal overflow to be handled by this element */
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* Hide the scrollbar visually but keep scrolling functionality */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+
+    /* WebKit (Chrome, Safari): hide scrollbar */
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+
+
+}
+
+.dashboardCard {
+    border: 1px solid black;
+    padding: 16px;
+    background-color: lightgray;
+
+    &__title {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    &__linkWrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+        grid-template-rows: auto;
+        border: 1px solid gray;
+
+    }
+
+    &__link {
+        padding: 8px;
+        border: 1px solid darkgray;
+
+        background-color: white;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+    }
+}
