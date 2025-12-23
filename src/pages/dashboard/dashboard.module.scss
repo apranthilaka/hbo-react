@@ -1,3 +1,5 @@
+@import '../../styles/globals.scss';
+
 .dashboard {
     /* Place in the layout grid */
     grid-column: 2/3;
@@ -11,6 +13,7 @@
     gap: 16px;
     padding: 16px;
     padding-bottom: 0;
+    background-color: $color-app-bg;
 
 }
 
@@ -49,14 +52,14 @@
 }
 
 .dashboardCard {
-    border: 1px solid gray;
-
+    border: 1px solid $nutral-border-low-emphasis;
     border-radius: 8px;
     transition: box-shadow 0.3s ease;
     height: min-content;
     overflow: hidden;
     overflow: hidden;
     border-radius: 8px;
+    background-color: white;
 
 
 
@@ -79,7 +82,7 @@
             align-items: center;
             transition: background-color .5s ease;
             font-size: 13px;
-            border: 1px solid gray;
+            border: 1px solid $nutral-border-low-emphasis;
 
             &--gp {
                 background-color: #E0F0FF;
@@ -93,7 +96,7 @@
 
             &--cp {
                 background-color: #FFF4CE;
-                color: #FFB900;
+                color: #bb8901;
             }
 
             &--me {
@@ -120,19 +123,24 @@
 
     &__linkWrapper {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(49%, 1fr));
         grid-template-rows: auto;
+
 
 
     }
 
     &__link {
-        padding: 8px;
-        border: 1px solid darkgray;
-
+        height: 40px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 16px;
         background-color: white;
-        text-align: center;
-        text-decoration: none;
-        color: black;
+
+
+
+        border: 1px solid $nutral-border-low-emphasis;
+        margin: -1px 0 0 -1px;
     }
 }

@@ -1,0 +1,125 @@
+.menuWrap {
+    padding: 12px;
+}
+
+.menuList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menuItem {
+    display: block;
+}
+
+.itemRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+    border-radius: 10px;
+}
+
+.itemLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.iconWrap {
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Ensure material symbols inside icons are 20px */
+    .material-symbols-outlined {
+        font-size: 20px;
+        line-height: 1;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.label {
+    font-size: 18px;
+    transition: opacity 180ms ease, transform 180ms ease;
+    white-space: nowrap;
+}
+
+.chevButton {
+    background: transparent;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    color: inherit;
+    transition: opacity 160ms ease, transform 160ms ease;
+}
+
+.chevButton .material-symbols-outlined {
+    font-size: 20px;
+    line-height: 1;
+}
+
+.submenu {
+    list-style: none;
+    padding-left: 44px;
+    margin: 4px 0 0 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 220ms ease, opacity 200ms ease, transform 200ms ease;
+    opacity: 0;
+    transform: translateY(-6px);
+}
+
+.submenu.open {
+    max-height: 240px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.submenuItem {
+    padding: 6px 0;
+}
+
+.submenuLink {
+    color: inherit;
+    text-decoration: none;
+}
+
+.collapsedMenu {
+    .menuList {
+        gap: 10px;
+    }
+
+    .itemRow {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+
+    .label {
+        opacity: 0;
+        transform: translateX(-6px);
+        pointer-events: none;
+    }
+
+    .chevButton {
+        opacity: 0;
+        pointer-events: none;
+        transform: scale(0.9);
+    }
+
+    .submenu {
+        max-height: 0 !important;
+        opacity: 0;
+        transform: translateY(-6px);
+        pointer-events: none;
+    }
+}

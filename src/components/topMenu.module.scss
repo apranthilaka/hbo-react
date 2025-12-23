@@ -4,8 +4,28 @@
     /* make the top row exactly the height allocated by the grid */
     height: 56px;
     box-sizing: border-box;
-    border: 1px solid black;
+    border: 1px solid rgb(214, 214, 214);
 
     /* ensure its contents don't push the layout down */
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+}
+
+.left {
+    font-weight: 600;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+}
+
+.collapseBtn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
 }

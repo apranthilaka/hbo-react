@@ -1,6 +1,7 @@
 .defaultLayout {
     display: grid;
-    grid-template-columns: 250px auto;
+    /* left menu width is controlled by the left menu element itself to allow smooth width transitions */
+    grid-template-columns: auto 1fr;
     /* top menu row fixed at 56px and content row takes remaining height */
     grid-template-rows: 56px 1fr;
     /* fill the viewport so the page container doesn't naturally scroll */

@@ -1,9 +1,59 @@
 .leftMenu {
     grid-column: 1/2;
     grid-row: 1/3;
-    border: 1px solid black;
+    border-right: 1px solid rgb(214, 214, 214);
     /* fit into the grid row and scroll internally if content grows */
     height: 100%;
     min-height: 0;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    background: #eaf6f2;
+    width: 250px;
+    transition: width 260ms cubic-bezier(.4, 0, .2, 1);
+}
+
+.logoRow {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.logoBtn {
+    background: transparent;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.collapseBtn {
+    background: transparent;
+    border: none;
+    padding: 6px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.collapseBtn .material-symbols-outlined {
+    font-size: 20px;
+    line-height: 1;
+}
+}
+
+.collapsed {
+    width: 64px;
+}
+
+.footer {
+    margin-top: auto;
+    padding: 18px;
+    font-size: 14px;
+    color: #6d6d6d;
 }
